@@ -1,8 +1,10 @@
 # Summer of Code 2018 - OpenPGP for XMPP Instant Messaging in Smack
 
-This is the project page for my Summer of Code project 2018. As you can read in the title, my project is about an implementation of OpenPGP for XMPP (short: OX) in the XMPP client library Smack.
+This is the project page for my Summer of Code project 2018. As you can read in the title, my project is about an implementation of OpenPGP for XMPP (short: OX) in the XMPP client library 
+[Smack](https://github.com/igniterealtime/Smack).
 
-OpenPGP for XMPP is specified in XEP-0373 and XEP-0374, where 373 specifies general building blocks, while the latter describes the usage profile for instant messaging (OX-IM).
+OpenPGP for XMPP is specified in [XEP-0373](https://xmpp.org/extensions/xep-0373.html) and [XEP-0374](https://xmpp.org/extensions/xep-0374.html), where 373 specifies general building blocks, while 
+the latter describes the usage profile for instant messaging (OX-IM).
 
 ## smack-openpgp, smack-openpgp-bouncycastle and pgpainless
 
@@ -22,10 +24,17 @@ You can find the code I'm working on in the following repositories:
 * [Smack](https://github.com/igniterealtime/Smack): Progress can be found in the openpgp branch 
 in my [fork](https://github.com/vanitasvitae/Smack/tree/openpgp).
 * [pgpainless](https://github.com/vanitasvitae/pgpainless): In order to implement OpenPGP 
-functionality for Smack, I forked the project 
-[bouncy-gpg](https://github.com/neuhalje/bouncy-gpg) and made some modifications.
+functionality for Smack, I forked the project [bouncy-gpg](https://github.com/neuhalje/bouncy-gpg) and made some modifications.
 
 ## Demo client
 
 I created a small command line client which demonstrates the capabilities of my OpenPGP API for Smack.
 You can find it [here](https://github.com/vanitasvitae/oxclient). Enjoy testing :)
+
+## Miscellaneous
+
+During my work, I...
+
+* detected a [bug in BouncyCastle](https://github.com/bcgit/bc-java/issues/348) which caused exported keys to have an invalid format.
+* Fixed some typos in XEP-0373.
+* extensively [blogged](https://blogs.fsfe.org/vanitasvitae/category/gsoc-2018/) about my progress.
