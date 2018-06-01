@@ -12,3 +12,7 @@ in my [fork](https://github.com/vanitasvitae/Smack/tree/openpgp).
 functionality for Smack, I forked the project 
 [bouncy-gpg](https://github.com/neuhalje/bouncy-gpg) and made some modifications.
 
+## Demo client
+
+I created a small command line client which demonstrates the capabilities of my OpenPGP API for Smack.
+You can find it [here](https://github.com/vanitasvitae/oxclient). Enjoy testing :)
