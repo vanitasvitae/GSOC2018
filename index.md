@@ -36,5 +36,6 @@ You can find it [here](https://github.com/vanitasvitae/oxclient). Enjoy testing 
 During my work, I...
 
 * detected a [bug in BouncyCastle](https://github.com/bcgit/bc-java/issues/348) which caused exported keys to have an invalid format.
+* created a [small patch](https://github.com/bcgit/bc-java/pull/362) for another "bug" in BouncyCastle.
 * Fixed some typos in XEP-0373.
 * extensively [blogged](https://blogs.fsfe.org/vanitasvitae/category/gsoc-2018/) about my progress.
