@@ -13,7 +13,8 @@ The code for my OX implementation is currently split in two modules:
 defines a set of interfaces, which can be implemented by backend implementations like smack-openpgp-bouncycastle.
 * smack-openpgp-bouncycastle on the other hand contains implementations of interfaces from smack-openpgp, as well as bindings to pgpainless. Its main purpose is to provide the cryptographic 
 functionality which is missing from smack-openpgp. Ideally there would be multiple of such backend implementations available at some point (out of scope for GSoC).
-* [pgpainless](https://github.com/vanitasvitae/pgpainless) is my fork of [bouncy-gpg](https://github.com/neuhalje/bouncy-gpg). It is my API for OpenPGP which internally uses 
+* [pgpainless](https://github.com/vanitasvitae/pgpainless) is my library for OpenPGP. It started as a fork of [bouncy-gpg](https://github.com/neuhalje/bouncy-gpg), but I quickly decided to start 
+from scratch and write my own library. The result is my API for OpenPGP which internally uses 
 [BouncyCastle](https://www.bouncycastle.org/). The plan is to make pgpainless as easy to use as possible, so that it can be incorporated in other (also non-Smack) projects that want to implement
 OpenPGP for XMPP.
 
