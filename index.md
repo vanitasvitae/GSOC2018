@@ -24,7 +24,7 @@ You can find the code I'm working on in the following repositories:
 * [Smack](https://github.com/igniterealtime/Smack): Progress can be found in the openpgp branch 
 in my [fork](https://github.com/vanitasvitae/Smack/tree/openpgp).
 * [pgpainless](https://github.com/vanitasvitae/pgpainless): In order to implement OpenPGP 
-functionality for Smack, I forked the project [bouncy-gpg](https://github.com/neuhalje/bouncy-gpg) and made some modifications.
+functionality for Smack, I created my own simple to use library.
 
 ## Demo client
 
