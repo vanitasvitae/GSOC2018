@@ -10,15 +10,20 @@ the latter describes the usage profile for instant messaging (OX-IM).
 
 The code for my OX implementation is currently split in two projects:
 
-* smack-openpgp contains the OX and OX:IM implementation for Smack. It consists of extension elements and providers, as well as manager classes which handle the OX workflow. It depends on PGPainless.
-* [PGPainless](https://www.pgpainless.org) is my library for OpenPGP. It started as a fork of [bouncy-gpg](https://github.com/neuhalje/bouncy-gpg), but I quickly decided to start from scratch and write my own library. The result is my API for OpenPGP which internally uses [Bouncycastle](https://www.bouncycastle.org/). The plan is to make pgpainless as easy to use as possible, so that it can be incorporated in other (also non-Smack) projects that want to implement OpenPGP for XMPP (and other purposes as well).
+* smack-openpgp contains the OX and OX:IM implementation for Smack. It consists of extension elements and providers, as well as manager classes which handle the OX workflow.
+I designed an easy to use API, which gives client developers the oportunity to quickly implement OpenPGP encrypted instant messaging. My implementation is capable of public key exchange over PubSub,
+encrypted secret key exchange between the users devices, as well as general encrypted messaging with signature verification. The user also has the option to easily generate fresh OpenPGP keys (RSA, 
+ElGamal, EC).
+* [PGPainless](https://pgpainless.org) is my library for OpenPGP. It started as a fork of [bouncy-gpg](https://github.com/neuhalje/bouncy-gpg), but I quickly decided to start from scratch and write 
+my own library. The result is my API for OpenPGP which internally uses [Bouncycastle](https://www.bouncycastle.org/). 
+The plan is to make pgpainless as easy to use as possible, so that it can be incorporated in other (also non-Smack) projects that want to implement OpenPGP for XMPP (and other purposes as well).
 
 ## Code
 
 You can find the code I'm working on in the following repositories:
 
 * [Smack](https://github.com/igniterealtime/Smack): Progress can be found in the openpgp branch in my [fork](https://github.com/vanitasvitae/Smack/tree/openpgp) and soon in Smacks master branch ;).
-* [PGPainless](https://www.pgpainless.org)
+* [PGPainless](https://pgpainless.org)
 
 ## Demo client
 
@@ -32,5 +37,11 @@ During my work, I...
 * detected a [bug in Bouncycastle](https://github.com/bcgit/bc-java/issues/348) which caused exported keys to have an invalid format.
 * detected [another bug in Bouncycastle](https://github.com/bcgit/bc-java/issues/381), which caused exported sub-keys to have a wrong package format, causing them to get lost on import.
 * created a [small patch](https://github.com/bcgit/bc-java/pull/362) for an inconvenience in Bouncycastle.
-* Did some formal work on XEP-0373 and XEP-0374 ([[1]](https://github.com/xsf/xeps/pull/621), [[2]](https://github.com/xsf/xeps/pull/634), [[3]](https://github.com/xsf/xeps/pull/644), [[4]](https://github.com/xsf/xeps/pull/669), [[5]](https://github.com/xsf/xeps/pull/670), [[6]](https://github.com/xsf/xeps/pull/683)).
+* Did some formal work on XEP-0373 and XEP-0374 
+([[1]](https://github.com/xsf/xeps/pull/621), 
+[[2]](https://github.com/xsf/xeps/pull/634), 
+[[3]](https://github.com/xsf/xeps/pull/644), 
+[[4]](https://github.com/xsf/xeps/pull/669), 
+[[5]](https://github.com/xsf/xeps/pull/670), 
+[[6]](https://github.com/xsf/xeps/pull/683)).
 * extensively [blogged](https://blogs.fsfe.org/vanitasvitae/category/gsoc-2018/) about my progress.
