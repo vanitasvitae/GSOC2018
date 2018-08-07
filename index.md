@@ -22,8 +22,9 @@ The plan is to make pgpainless as easy to use as possible, so that it can be inc
 
 You can find the code I'm working on in the following repositories:
 
-* [Smack](https://github.com/igniterealtime/Smack): Progress can be found in the openpgp branch in my [fork](https://github.com/vanitasvitae/Smack/tree/openpgp) and soon in Smacks master branch ;).
-* [PGPainless](https://pgpainless.org)
+* [Smack](https://github.com/igniterealtime/Smack): The code has been [merged](https://github.com/igniterealtime/Smack/pull/254) into Smacks master branch and can be found in the 
+[smack-openpgp](https://github.com/igniterealtime/Smack/tree/master/smack-openpgp) module.
+* [PGPainless](https://github.com/pgpainless/pgpainless)
 
 ## Demo client
 
@@ -34,7 +35,8 @@ You can find it [here](https://github.com/vanitasvitae/oxclient). Enjoy testing 
 
 During my work, I...
 
-* detected a [bug in Bouncycastle](https://github.com/bcgit/bc-java/issues/348) which caused exported keys to have an invalid format.
+* made myself familiar with the [OpenPGP Specification](https://tools.ietf.org/html/rfc4880)
+* detected a [bug in Bouncycastle](https://github.com/bcgit/bc-java/issues/348) which caused exported keys to have an invalid format by using a wrong checksum in unencrypted keys.
 * detected [another bug in Bouncycastle](https://github.com/bcgit/bc-java/issues/381), which caused exported sub-keys to have a wrong package format, causing them to get lost on import.
 * created a [small patch](https://github.com/bcgit/bc-java/pull/362) for an inconvenience in Bouncycastle.
 * Did some formal work on XEP-0373 and XEP-0374 
